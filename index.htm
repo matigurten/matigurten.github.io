@@ -1,1 +1,25 @@
-Hello
+<body>
+</body>
+
+<script>
+'strict mode';
+
+function fibo (pred) {
+    return [pred[1], pred[0] + pred[1]]
+}
+function fiboIndex(n) {
+    var fib = [0,1]
+    while (n > 0) {
+        fib = fibo(fib)
+        n--
+    };
+    return fib[1]
+}
+
+var i25 = fiboIndex(25)
+
+for (var i=0 ; i<10; i++) {
+    document.body.innerHTML += fiboIndex(i) + '<br />\n'
+}
+
+</script>
